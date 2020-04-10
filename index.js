@@ -3,6 +3,9 @@ const express = require('express');
 //object app, function express
 const app = express();
 
+//adding middleware, we can write app.use to use the middleware
+app.use(express.json())
+
 const dogs = [
  {
    id: 1,
@@ -49,6 +52,26 @@ res.send('Hello world');
 app.get('/api/dogs', (req, res) => {
 res.send(dogs);
 });
+
+
+//post method. create a new object to our array in server
+//this method takes 2 arguments, first the path/URL. 
+//The second is a callbackfunction. 
+//This function will be called when we have an http get-request to the URL endpoint '/'
+//the callback have two arguments, request and response
+//define route '/' and a route-handler(the callback function)
+app.post('/api/dogs', (req, res) => {
+    const dog = {
+       id: dogs.array + 1,
+       name: req.body.name,
+       born: req.body.born,
+       breed: req.body.breed
+    };
+    //push the object to the array
+    dogs.push(dog)
+    //send the object to the client
+    res.send(dog)
+})
 
 //get the objects that matches the id in URL to the value of id for the object. 
 //store id in dog and send it to the client.
