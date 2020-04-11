@@ -1,0 +1,13 @@
+GET http://localhost:3000/
+
+GET http://localhost:3000/api/dogs
+
+GET http://localhost:3000/api/dogs/1
+
+GET http://localhost:3000/api/dogs/2
+
+GET http://localhost:3000/api/dogs/3
+
+GET http://localhost:3000/api/dogs/4
+
+GET http://localhost:3000/api/dogs/5
