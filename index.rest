@@ -1,23 +1,30 @@
 
 //OK -read
 GET http://localhost:3000/api/dogs
-
 ###
 
-//json for body ??? -create
-POST   http://localhost:3000/api/dogs
-//json for body ???
+
+//OK -create (separate header from body with a blank line between)
+POST   http://localhost:3000/api/dogs HTTP/1.1 
+content-type: application/json
+
 {
     "name": "vov",
-    "born": "2020",
+    "born": 2020,
     "breed": "hund"
 }
-
 ###
 
-//json for body ??? -update/replace
-PUT http://localhost:3000/api/dogs/1
 
+//OK -update/replace (separate header from body with a blank line between)
+PUT http://localhost:3000/api/dogs/1 HTTP/1.1 
+content-type: application/json
+
+{
+    "name": "vov",
+    "born": 2020,
+    "breed": "hund"
+}
 ###
 
 
