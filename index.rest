@@ -1,13 +1,26 @@
-GET http://localhost:3000/
 
+//OK -read
 GET http://localhost:3000/api/dogs
 
-GET http://localhost:3000/api/dogs/1
+###
 
-GET http://localhost:3000/api/dogs/2
+//json for body ??? -create
+POST   http://localhost:3000/api/dogs
+//json for body ???
+{
+    "name": "vov",
+    "born": "2020",
+    "breed": "hund"
+}
 
-GET http://localhost:3000/api/dogs/3
+###
 
-GET http://localhost:3000/api/dogs/4
+//json for body ??? -update/replace
+PUT http://localhost:3000/api/dogs/1
 
-GET http://localhost:3000/api/dogs/5
+###
+
+
+//OK -delete
+DELETE http://localhost:3000/api/dogs/1
+
