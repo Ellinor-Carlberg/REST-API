@@ -15,8 +15,13 @@ const app = express();
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`listening on port ${port}`));
 
-//Adding middleware, we can write app.use to use the middleware
+//Adding middleware, parser for body. parse json to text and vise versa.
 app.use(express.json());
+
+//Adding middleware, to serve file from whitin a given root direction
+//in this case, folder with name public
+app.use(express.static('public'));
+
 
 //The resource, a array of objects.
 const dogs = [
