@@ -2,7 +2,7 @@
 A simple REST-API with Node.JS and Express
 
 # Description of the project
-The REST-API has CRUD functionality, it has four endpoints with the request methods: GET, POST, PUT and DELETE. 
+The REST-API has CRUD functionality, it has five endpoints and the request methods: GET, POST, PUT and DELETE. 
 The resource I have been working with is a array of objects stored locally in the server file. 
 There are four objects and each object have the data: id, name, born and breed to describes different dogs. 
 
