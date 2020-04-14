@@ -69,11 +69,11 @@ app.get("/api/dogs/:id", (req, res) => {
 //Create a new dog object to our array in server
 app.post("/api/dogs", (req, res) => {
 
-/*   //validation, if name, born or breed exist or not
+//validation, if name, born or breed exist or not
   if (!req.body.name || !req.body.born || !req.body.breed) 
     //send this error message to the client
    return res.status(400).send('Name, year of birth and breed is required.');
-   */
+   
 
   //define how the object will look like
   const dog = {
@@ -96,11 +96,11 @@ app.put("/api/dogs/:id", (req, res) => {
   const dog = dogs.find((d) => d.id === parseInt(req.params.id));
   if (!dog) return res.status(404).send("The dog with the given ID was not found.");
 
-/*   //validation, if name, born or breed exist or not
+  //validation, if name, born or breed exist or not
   if (!req.body.name || !req.body.born || !req.body.breed) 
     //send this error message to the client
    return res.status(400).send('Name, year of birth and breed is required.');
-   */
+ 
 
   //update the dog object
   dog.name = req.body.name;
