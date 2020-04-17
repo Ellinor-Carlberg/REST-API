@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Tuff",
+        "born": 2012,
+        "breed": "Dachshund"
+    },
+    {
+        "id": 2,
+        "name": "Otto",
+        "born": 2015,
+        "breed": "Weimaraner"
+    },
+    {
+        "id": 3,
+        "name": "Uno",
+        "born": 2017,
+        "breed": "Italian greyhound"
+    },
+    {
+        "id": 4,
+        "name": "Inka",
+        "born": 2019,
+        "breed": "Perro sin pelo del perú"
+    }
+]
