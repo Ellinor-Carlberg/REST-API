@@ -9,7 +9,7 @@ body {
 
 header {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0 2rem 0;
   font-family: "Roboto Slab", serif;
   font-size: 2rem;
 }
@@ -41,5 +41,9 @@ img {
   width: 20rem;
   top: 5%;
   text-align: center;
-  opacity: 1;
+  
+}
+
+#allDogs div {
+    padding: .5rem 0 .5rem 0;
 }
