@@ -9,12 +9,6 @@ const express = require("express");
 //Object app, call the function express.
 const app = express();
 
-//PORT. assign the port for the app.
-//Use the environment variable PORT, else port 3000.
-//console.log too se which port are in use.
-const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`listening on port ${port}`));
-
 //Adding middleware, parser for body. parse json to text and vise versa.
 app.use(express.json());
 
@@ -133,5 +127,13 @@ app.delete("/api/dogs/:id", (req, res) => {
    res.send(dog)
 
 })
+
+
+//PORT. assign the port for the app.
+//Use the environment variable PORT, else port 3000.
+//console.log too se which port are in use.
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`listening on port ${port}`));
+
 
 

@@ -1,4 +1,4 @@
-
+//does not have a error message, if the array doest exist(not nesesary )
 fetch("http://localhost:3000/api/dogs").then((response) => {
 return response.json()
 }).then((dogs) => {
