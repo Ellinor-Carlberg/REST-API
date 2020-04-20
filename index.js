@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 
 //Adding middleware, to serve file from whitin a given root direction
-//in this case, folder with name public
+//in this case, everything in folder with name public
 app.use(express.static('public'));
 
 
@@ -76,7 +76,7 @@ app.post("/api/dogs", (req, res) => {
 
   //define how the object will look like
   const dog = {
-    id: dogs.length + 1,
+    id: randomID(),
     name: req.body.name,
     born: req.body.born,
     breed: req.body.breed,
@@ -86,6 +86,13 @@ app.post("/api/dogs", (req, res) => {
   //send the object to the client
   res.send(dog);
 });
+
+//creating a random id for making a new id in the post method.
+let randomID = () => {
+  return Math.floor((1 + Math.random()) * 0x10000)
+  .toString(16)
+  .substring(1)
+}
 
 //PUT METHOD.
 //For updating a dog object.
@@ -100,7 +107,6 @@ app.put("/api/dogs/:id", (req, res) => {
     //send this error message to the client
    return res.status(400).send('Name, year of birth and breed is required.');
  
-
   //update the dog object
   dog.name = req.body.name;
   dog.born = req.body.born;
@@ -125,12 +131,11 @@ app.delete("/api/dogs/:id", (req, res) => {
 
    //return the updated dog object to the client
    res.send(dog)
-
 })
 
 
 //PORT. assign the port for the app.
-//Use the environment variable PORT, else port 3000.
+//Use the environment variable PORT(not needed in this project), else port 3000.
 //console.log too se which port are in use.
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`listening on port ${port}`));

@@ -1,4 +1,5 @@
-//does not have a error message, if the array doest exist(not nesesary )
+//does not have a error message, if the array doest exist(not nesesary in this case)
+//takes one argument — the path to the resource you want to fetch — and returns a promise containing the response
 fetch("http://localhost:3000/api/dogs").then((response) => {
 return response.json()
 }).then((dogs) => {
