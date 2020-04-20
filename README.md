@@ -2,13 +2,33 @@
 A simple REST-API with Node.JS and Express
 
 # Description of the project
-The REST-API has CRUD functionality, it has five endpoints and the request methods: GET, POST, PUT and DELETE. 
+The REST-API has:
+CRUD functionality
+It has five endpoints and the request methods: GET, POST, PUT and DELETE. 
 The resource I have been working with is a array of objects stored locally in the server file. 
 There are four objects and each object have the data: id, name, born and breed to describes different dogs. 
 
 I have used the Visual studio Code extension REST client for testing my API. 
 
-# How the project is built and run
+All criteria for passing the assignment är met.
+
+# How to run the project
+
+1. First write:
+npm install
+in the terminal.
+
+2. Then run the app with nodemon by writing:
+nodemon index.js
+in the terminal.
+The app listen on port 3000
+
+3. To try the endpoints with the extension REST client,
+download REST client in Visual Studio Code
+and open the file with name index.rest for testing my API.
+
+
+# How I built the project
 1. First I install Node.JS
 https://nodejs.org/en/download/
 
